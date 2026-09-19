@@ -465,9 +465,17 @@ fbq('track', 'PageView');
         <input type="number" id="f_age" min="15" max="70" required>
       </div>
       <div class="field">
-        <label>Phone</label>
-        <input type="tel" id="f_phone" maxlength="10" required>
+        <label>Gender</label>
+        <select id="f_gender" required>
+          <option value="Female" selected>Female</option>
+          <option value="Male">Male</option>
+          <option value="Other">Other</option>
+        </select>
       </div>
+    </div>
+    <div class="field">
+      <label>Phone</label>
+      <input type="tel" id="f_phone" maxlength="10" required>
     </div>
     <div class="field">
       <label>You are a...</label>
@@ -520,10 +528,11 @@ fbq('track', 'PageView');
     e.preventDefault();
     const name = document.getElementById('f_name').value.trim();
     const age = document.getElementById('f_age').value;
+    const gender = document.getElementById('f_gender').value;
     const phone = document.getElementById('f_phone').value.replace(/\D/g,'');
     const profile = document.getElementById('f_profile').value;
 
-    if(!name || !age || phone.length < 6){
+    if(!name || !age || !gender || phone.length < 6){
       alert('Please fill all fields correctly.');
       return;
     }
@@ -534,6 +543,7 @@ fbq('track', 'PageView');
       const formData = new FormData();
       formData.append('name', name);
       formData.append('age', age);
+      formData.append('gender', gender);
       formData.append('phone', phone);
       formData.append('profile', profile);
       formData.append('source', 'growwithshivkrity');
@@ -542,7 +552,7 @@ fbq('track', 'PageView');
     }
 
     const msg = encodeURIComponent(
-      `Hello Shiv & Krity,\n\nI'm interested in Grow with ShivKrity. Here are my details:\n\nName: ${name}\nAge: ${age}\nPhone: ${phone}\nI am a: ${profile}\n\nPlease share the next steps. Thank you!`
+      `Hello Shiv & Krity,\n\nI'm interested in Grow with ShivKrity. Here are my details:\n\nName: ${name}\nAge: ${age}\nGender: ${gender}\nPhone: ${phone}\nI am a: ${profile}\n\nPlease share the next steps. Thank you!`
     );
     window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
     closeModal();
