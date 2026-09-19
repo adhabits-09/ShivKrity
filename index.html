@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Grow with ShivKrity — Learn • Grow • Inspire</title>
+
+<meta name="description" content="Shiv &amp; Krity teach practical digital skills — Canva, video editing, content creation, freelancing and more — so housewives, beginners and couples can build a future without leaving their family behind.">
+<meta property="og:title" content="Grow with ShivKrity — Learn • Grow • Inspire">
+<meta property="og:image" content="https://i.ibb.co/vCtXDzJP/Whats-App-Image-2026-09-19-at-4-16-17-PM.jpg">
+<meta name="theme-color" content="#14504A">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lucide-static/0.363.0/umd/lucide.min.js"></script>
+
+<!-- Meta Pixel Code (replace 0000000000000 with your Pixel ID) -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '0000000000000');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+
+<style>
+  :root{
+    --cream:#FFF6F8;
+    --cream-deep:#FCE4EC;
+    --ink:#3A0D22;
+    --teal:#C2185B;
+    --teal-deep:#880E4F;
+    --teal-tint:#FBDCE7;
+    --gold:#E91E63;
+    --gold-soft:#F48FB1;
+    --wa:#25D366;
+    --wa-deep:#128C7E;
+    --line:rgba(194,24,89,.16);
+  }
+  :root:not([data-theme="light"]){
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --cream:#26101B; --cream-deep:#3A0D22; --ink:#F9E3EC; --teal:#F48FB1; --teal-deep:#3A0D22;
+      --teal-tint:#3E1526; --gold:#F48FB1; --line:rgba(244,143,177,.2);
+    }
+  }
+  :root[data-theme="dark"]{
+    --cream:#26101B; --cream-deep:#3A0D22; --ink:#F9E3EC; --teal:#F48FB1; --teal-deep:#3A0D22;
+    --teal-tint:#3E1526; --gold:#F48FB1; --line:rgba(244,143,177,.2);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Work Sans',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  section{padding:88px 0;}
+  h1,h2,h3{font-family:'Fraunces',serif;color:var(--teal-deep);}
+  :root[data-theme="dark"] h1, :root[data-theme="dark"] h2, :root[data-theme="dark"] h3{color:var(--gold-soft);}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) h1, :root:not([data-theme="light"]) h2, :root:not([data-theme="light"]) h3{color:var(--gold-soft);}
+  }
+  h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;line-height:1.08;letter-spacing:-.01em;}
+  h2{font-size:clamp(1.7rem,3.2vw,2.35rem);font-weight:600;line-height:1.15;margin-bottom:.6em;}
+  p{max-width:62ch;}
+  .center{text-align:center;margin-left:auto;margin-right:auto;}
+
+  a{color:inherit;}
+
+  /* ---------- Header photo ---------- */
+  .lead-photo{
+    display:block;
+    width:100%;
+    max-width:560px;
+    margin:0 auto;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 18px 45px rgba(12,51,47,.22);
+    border:1px solid var(--line);
+  }
+  .lead-photo img{width:100%;height:auto;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(680px 380px at 85% -10%, rgba(201,138,45,.14), transparent 60%),
+      linear-gradient(180deg,var(--cream-deep),var(--cream) 65%);
+    padding-top:56px;
+  }
+  .hero-top{text-align:center;padding-bottom:36px;}
+  .eyebrow-line{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:.95rem;color:var(--teal);font-weight:600;
+    margin-bottom:22px;
+  }
+  .eyebrow-line::before,.eyebrow-line::after{content:"";width:26px;height:1px;background:var(--gold);}
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;margin-top:20px;
+  }
+  .hero-copy p{font-size:1.12rem;color:var(--ink);opacity:.88;margin-top:18px;}
+  .hero-stats{display:flex;gap:34px;margin-top:34px;flex-wrap:wrap;}
+  .hero-stat b{font-family:'Fraunces',serif;font-size:2rem;color:var(--teal-deep);display:block;font-weight:600;}
+  :root[data-theme="dark"] .hero-stat b{color:var(--gold-soft);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero-stat b{color:var(--gold-soft);}}
+  .hero-stat span{font-size:.88rem;opacity:.7;}
+
+  .hero-photo-frame{
+    position:relative;border-radius:22px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(12,51,47,.28);
+  }
+  .hero-photo-frame img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;}
+  .hero-photo-caption{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:20px;color:#fff;
+    background:linear-gradient(transparent,rgba(12,51,47,.88));
+  }
+  .hero-photo-caption .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;}
+  .hero-photo-caption .role{font-size:.85rem;opacity:.85;}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 26px;border-radius:100px;font-weight:600;
+    text-decoration:none;border:none;cursor:pointer;font-size:1rem;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-wa{background:linear-gradient(135deg,var(--wa),var(--wa-deep));color:#fff;box-shadow:0 10px 26px rgba(37,211,102,.32);}
+  .btn-wa:hover{box-shadow:0 16px 34px rgba(37,211,102,.42);}
+  .btn-outline{background:transparent;border:1.5px solid var(--teal);color:var(--teal-deep);}
+  :root[data-theme="dark"] .btn-outline{color:var(--gold-soft);border-color:var(--gold-soft);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn-outline{color:var(--gold-soft);border-color:var(--gold-soft);}}
+  .btn-outline:hover{background:var(--teal-tint);}
+  .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;}
+
+  /* ---------- Our story ---------- */
+  .story{background:var(--cream);}
+  .story-inner{max-width:760px;margin:0 auto;}
+  .story p{max-width:none;font-size:1.06rem;opacity:.9;margin-bottom:1.15em;}
+  .pull-quote{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:500;
+    font-size:1.5rem;color:var(--teal-deep);line-height:1.4;
+    border-left:3px solid var(--gold);padding-left:22px;margin:34px 0;
+  }
+  :root[data-theme="dark"] .pull-quote{color:var(--gold-soft);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pull-quote{color:var(--gold-soft);}}
+
+  /* ---------- Audience ---------- */
+  .audience{background:var(--teal-tint);}
+  .audience-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px;}
+  .aud-card{
+    background:var(--cream);border:1px solid var(--line);border-radius:16px;
+    padding:28px 26px;
+  }
+  .aud-card h3{font-size:1.2rem;font-weight:600;margin-bottom:10px;color:var(--teal-deep);}
+  :root[data-theme="dark"] .aud-card h3{color:var(--gold-soft);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .aud-card h3{color:var(--gold-soft);}}
+  .aud-card p{opacity:.85;font-size:.98rem;}
+  .aud-card .quote{
+    margin-top:12px;font-style:italic;color:var(--teal);opacity:.9;font-size:.95rem;
+  }
+
+  /* ---------- Skills ---------- */
+  .skills-grid{
+    display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;
+  }
+  .skill-pill{
+    border:1px solid var(--line);background:var(--cream);
+    padding:10px 20px;border-radius:100px;font-size:.95rem;font-weight:500;
+    color:var(--teal-deep);
+  }
+  :root[data-theme="dark"] .skill-pill{color:var(--gold-soft);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .skill-pill{color:var(--gold-soft);}}
+
+  .approach-strip{
+    margin-top:44px;display:flex;align-items:center;flex-wrap:wrap;gap:14px;
+    font-family:'Fraunces',serif;font-size:1.15rem;color:var(--teal-deep);font-weight:600;
+  }
+  :root[data-theme="dark"] .approach-strip{color:var(--gold-soft);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .approach-strip{color:var(--gold-soft);}}
+  .approach-strip .arrow{color:var(--gold);font-weight:400;}
+
+  /* ---------- Journey steps ---------- */
+  .journey{background:var(--cream-deep);}
+  .steps{margin-top:44px;display:flex;flex-direction:column;}
+  .step-row{display:grid;grid-template-columns:64px 1fr;gap:22px;padding:22px 0;border-top:1px solid var(--line);}
+  .step-row:last-child{border-bottom:1px solid var(--line);}
+  .step-num{
+    font-family:'Fraunces',serif;font-size:1.6rem;color:var(--gold);font-weight:600;
+  }
+  .step-row h3{font-size:1.12rem;font-weight:600;margin-bottom:4px;color:var(--teal-deep);}
+  :root[data-theme="dark"] .step-row h3{color:var(--gold-soft);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .step-row h3{color:var(--gold-soft);}}
+  .step-row p{opacity:.85;font-size:.97rem;}
+
+  /* ---------- CTA ---------- */
+  .cta{
+    background:linear-gradient(160deg,var(--teal-deep),var(--teal));
+    color:#F4EFE3;text-align:center;
+  }
+  .cta h2{color:#fff;}
+  .cta p.lead{opacity:.85;font-size:1.08rem;margin:0 auto 34px;}
+  .cta-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(244,239,227,.18);
+    border-radius:18px;padding:38px;max-width:640px;margin:0 auto;
+    backdrop-filter:blur(6px);
+  }
+  .cta-card .steps-inline{
+    display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin:26px 0 4px;
+    font-size:.92rem;opacity:.85;
+  }
+  .cta-card .steps-inline span{display:block;font-weight:600;color:var(--gold-soft);margin-bottom:2px;}
+  .instagram-row{margin-top:26px;}
+  .instagram-link{
+    display:inline-flex;align-items:center;gap:10px;
+    color:#F4EFE3;text-decoration:none;font-weight:600;font-size:.98rem;
+    border-bottom:1.5px solid var(--gold-soft);padding-bottom:2px;
+  }
+  .signoff{margin-top:56px;opacity:.75;font-size:.92rem;}
+  .signoff .names{font-family:'Fraunces',serif;font-size:1.15rem;color:#fff;opacity:1;margin-bottom:6px;}
+
+  /* ---------- Popup form ---------- */
+  .overlay{
+    position:fixed;inset:0;background:rgba(12,51,47,.72);backdrop-filter:blur(6px);
+    z-index:999;opacity:0;visibility:hidden;transition:all .3s;
+  }
+  .overlay.show{opacity:1;visibility:visible;}
+  .modal{
+    position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.94);
+    z-index:1000;width:92%;max-width:440px;background:var(--cream);
+    border-radius:18px;padding:34px;opacity:0;visibility:hidden;transition:all .3s;
+    box-shadow:0 30px 70px rgba(0,0,0,.35);
+  }
+  .modal.show{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1);}
+  .modal h3{margin-bottom:4px;}
+  .modal p.sub{opacity:.7;font-size:.92rem;margin-bottom:22px;}
+  .modal-close{
+    position:absolute;top:16px;right:16px;background:none;border:none;
+    font-size:1.4rem;color:var(--teal);cursor:pointer;line-height:1;
+  }
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-size:.88rem;font-weight:600;margin-bottom:6px;color:var(--teal-deep);}
+  :root[data-theme="dark"] .field label{color:var(--gold-soft);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .field label{color:var(--gold-soft);}}
+  .field input, .field select{
+    width:100%;padding:11px 14px;border-radius:9px;border:1.5px solid var(--line);
+    background:var(--cream-deep);color:var(--ink);font-family:inherit;font-size:.96rem;
+  }
+  .field input:focus, .field select:focus{outline:none;border-color:var(--gold);}
+  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+
+  footer{padding:30px 0;text-align:center;font-size:.85rem;opacity:.6;}
+
+  @media(max-width:860px){
+    section{padding:60px 0;}
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-photo-frame{order:-1;max-width:360px;margin:0 auto;}
+    .audience-grid{grid-template-columns:1fr;}
+    .row-2{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="wrap hero-top">
+    <span class="eyebrow-line">Learn · Grow · Inspire</span>
+    <a href="https://ibb.co/6cdXNs4P" target="_blank" rel="noopener">
+      <div class="lead-photo">
+        <img src="https://i.ibb.co/vCtXDzJP/Whats-App-Image-2026-09-19-at-4-16-17-PM.jpg" alt="Shiv and Krity">
+      </div>
+    </a>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1>Grow with ShivKrity</h1>
+        <p>We are Shiv and Krity — a husband-and-wife team who started our digital journey from zero about a year ago. No technical background, no shortcuts. Just consistent learning, practice, and a simple dream: to build a future without leaving our family behind.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>700+</b><span>People trained &amp; guided</span></div>
+          <div class="hero-stat"><b>1 yr</b><span>Our own journey, start to now</span></div>
+          <div class="hero-stat"><b>10+</b><span>Practical digital skills taught</span></div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-wa js-open-form"><i data-lucide="message-circle" width="18"></i> Message us on WhatsApp</button>
+          <a class="btn btn-outline" href="https://www.instagram.com/growwithshivkrity?stkn=eDc0dTdmNjE4M2Zo" target="_blank" rel="noopener"><i data-lucide="instagram" width="18"></i> Follow on Instagram</a>
+        </div>
+      </div>
+      <div class="hero-photo-frame">
+        <img src="https://i.ibb.co/vCtXDzJP/Whats-App-Image-2026-09-19-at-4-16-17-PM.jpg" alt="Shiv and Krity">
+        <div class="hero-photo-caption">
+          <div class="name">Shiv &amp; Krity</div>
+          <div class="role">Digital Skills Coaches</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== OUR STORY ===================== -->
+<section class="story">
+  <div class="wrap story-inner">
+    <h2>Our story</h2>
+    <p>We did not come from a traditional technical background. Like many beginners, we started learning digital work, online tools, content creation, marketing and various digital skills from scratch — asking the same questions most people start with: what should we learn, where do we begin, and which skills are actually practical?</p>
+    <p>We learned gradually, practiced consistently, made our share of mistakes, and kept growing through experience. Today we've trained and guided 700+ people, and we're still moving forward in our own digital journey.</p>
+    <p class="pull-quote">"Our journey was never just about money — it was about learning, working and growing while staying close to family."</p>
+    <p>Many couples want to stay with their children, parents and loved ones, but career and financial pressure often pushes people to move away in search of opportunity. We understand that reality closely — it's exactly why we chose to seriously learn and apply digital skills in our own lives.</p>
+    <p>After nearly a year of continuous learning, practice and work, our situation looks very different from where we started. We're no longer dependent on moving away from family just to earn a living — building digital skills gave us a path to work and grow while staying right where our family is. For us, that's one of the biggest wins of this journey.</p>
+  </div>
+</section>
+
+<!-- ===================== AUDIENCE ===================== -->
+<section class="audience">
+  <div class="wrap">
+    <h2 class="center">Looking for something new in your life?</h2>
+    <p class="center" style="margin:0 auto;opacity:.75;">See which of these sounds like you.</p>
+    <div class="audience-grid">
+      <div class="aud-card">
+        <h3>If you're a housewife</h3>
+        <p>You may be educated and skilled, but family duties, children or household responsibilities keep you from a regular job.</p>
+        <p class="quote">"How can I prioritise my family while also doing something meaningful for myself?"</p>
+      </div>
+      <div class="aud-card">
+        <h3>If you're a beginner</h3>
+        <p>Maybe you've never worked in the digital space before. You want to learn — you're just unsure where to start, what to learn, and which skill is right for you.</p>
+      </div>
+      <div class="aud-card">
+        <h3>If you're a couple</h3>
+        <p>You want to stay together as a family, spend more time with children and parents, and still grow financially and professionally — together.</p>
+      </div>
+      <div class="aud-card">
+        <h3>If you're seeking opportunity</h3>
+        <p>Before you go looking for opportunities, you need the right skills and direction first. Building capability matters more than chasing openings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section class="story">
+  <div class="wrap">
+    <h2>Practical digital skills</h2>
+    <p style="opacity:.8;">Skills you can start learning and practicing directly from your smartphone.</p>
+    <div class="skills-grid">
+      <span class="skill-pill">Canva &amp; Graphic Design</span>
+      <span class="skill-pill">Mobile Video Editing</span>
+      <span class="skill-pill">Content Creation</span>
+      <span class="skill-pill">Copywriting</span>
+      <span class="skill-pill">AI Tools</span>
+      <span class="skill-pill">Social Media Skills</span>
+      <span class="skill-pill">WhatsApp Marketing</span>
+      <span class="skill-pill">Freelancing</span>
+      <span class="skill-pill">Affiliate Marketing</span>
+      <span class="skill-pill">Digital Marketing</span>
+    </div>
+    <div class="approach-strip">
+      <span>Learn Skills</span><span class="arrow">→</span>
+      <span>Practice</span><span class="arrow">→</span>
+      <span>Build Capability</span><span class="arrow">→</span>
+      <span>Explore Opportunities</span><span class="arrow">→</span>
+      <span>Grow</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY US / JOURNEY ===================== -->
+<section class="journey">
+  <div class="wrap">
+    <h2>Why we can understand your situation</h2>
+    <p style="opacity:.85;">Because we also started as complete beginners — and had to figure out every one of these questions ourselves.</p>
+    <div class="steps">
+      <div class="step-row">
+        <div class="step-num">01</div>
+        <div>
+          <h3>What should I learn?</h3>
+          <p>We narrow it down to the skills that are genuinely practical for beginners, not everything at once.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">02</div>
+        <div>
+          <h3>Where should I start?</h3>
+          <p>A clear starting point instead of scattered, overwhelming information.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">03</div>
+        <div>
+          <h3>How should I practice?</h3>
+          <p>Step-by-step, hands-on practice — the same way we learned it ourselves.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">04</div>
+        <div>
+          <h3>How do I use this going forward?</h3>
+          <p>Turning a learned skill into consistent, real-world use.</p>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:30px;opacity:.85;">We don't promise everyone will get identical results. But if you're genuinely serious about learning, willing to practice consistently, and committed to moving in the right direction, our experience — and our mistakes — can give your journey more clarity and structure from day one.</p>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Family and personal growth aren't opposites</h2>
+    <p class="lead">This journey is especially built for housewives who want to learn something new while staying close to family — and open to any beginner or couple ready to start their digital journey.</p>
+    <div class="cta-card">
+      <h3 style="color:#fff;">How to start?</h3>
+      <p class="sub" style="color:#F4EFE3;opacity:.75;">Message us directly on WhatsApp with your name, age and a line about yourself.</p>
+      <button class="btn btn-wa js-open-form" style="margin-top:6px;"><i data-lucide="message-circle" width="18"></i> Message us on WhatsApp</button>
+      <div class="steps-inline">
+        <div><span>Step 1</span>Share your details</div>
+        <div><span>Step 2</span>We reply within 24 hrs</div>
+        <div><span>Step 3</span>Get your roadmap</div>
+      </div>
+      <div class="instagram-row">
+        <a class="instagram-link" href="https://www.instagram.com/growwithshivkrity?stkn=eDc0dTdmNjE4M2Zo" target="_blank" rel="noopener">
+          <i data-lucide="instagram" width="18"></i> @growwithshivkrity on Instagram
+        </a>
+      </div>
+    </div>
+    <div class="signoff">
+      <p class="names">Learn. Practice. Build Your Skills. Explore New Possibilities.</p>
+      <p>With warmth, Shiv &amp; Krity</p>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">© 2026 Grow with ShivKrity. All rights reserved.</footer>
+
+<!-- ===================== FORM POPUP ===================== -->
+<div class="overlay" id="overlay"></div>
+<div class="modal" id="modal">
+  <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+  <h3>Start your journey</h3>
+  <p class="sub">Share a few details, we'll take it from there on WhatsApp.</p>
+  <form id="leadForm">
+    <div class="field">
+      <label>Full name</label>
+      <input type="text" id="f_name" required>
+    </div>
+    <div class="row-2">
+      <div class="field">
+        <label>Age</label>
+        <input type="number" id="f_age" min="15" max="70" required>
+      </div>
+      <div class="field">
+        <label>Phone</label>
+        <input type="tel" id="f_phone" maxlength="10" required>
+      </div>
+    </div>
+    <div class="field">
+      <label>You are a...</label>
+      <select id="f_profile" required>
+        <option value="Housewife" selected>Housewife</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Couple">Couple</option>
+        <option value="Working Professional">Working Professional</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-wa" style="width:100%;justify-content:center;margin-top:6px;">
+      <i data-lucide="message-circle" width="18"></i> Send to WhatsApp
+    </button>
+  </form>
+</div>
+
+<script>
+  lucide.createIcons();
+
+  const WA_NUMBER = "919069810427";
+
+  const overlay = document.getElementById('overlay');
+  const modal = document.getElementById('modal');
+  const modalClose = document.getElementById('modalClose');
+  const leadForm = document.getElementById('leadForm');
+
+  function openModal(){
+    overlay.classList.add('show');
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    overlay.classList.remove('show');
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.js-open-form').forEach(btn=>{
+    btn.addEventListener('click', openModal);
+  });
+  overlay.addEventListener('click', closeModal);
+  modalClose.addEventListener('click', closeModal);
+  document.addEventListener('keydown', e=>{ if(e.key === 'Escape') closeModal(); });
+
+  leadForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('f_name').value.trim();
+    const age = document.getElementById('f_age').value;
+    const phone = document.getElementById('f_phone').value.replace(/\D/g,'');
+    const profile = document.getElementById('f_profile').value;
+
+    if(!name || !age || phone.length < 6){
+      alert('Please fill all fields correctly.');
+      return;
+    }
+
+    if (typeof fbq !== 'undefined') { fbq('track', 'Contact'); }
+
+    const msg = encodeURIComponent(
+      `Hello Shiv & Krity,\n\nI'm interested in Grow with ShivKrity. Here are my details:\n\nName: ${name}\nAge: ${age}\nPhone: ${phone}\nI am a: ${profile}\n\nPlease share the next steps. Thank you!`
+    );
+    window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
+    closeModal();
+    leadForm.reset();
+  });
+</script>
+</body>
+</html>
