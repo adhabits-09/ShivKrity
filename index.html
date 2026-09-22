@@ -291,19 +291,103 @@ fbq('track', 'PageView');
   @media(max-width:860px){
     .reel-card{flex:0 0 78vw;height:calc(78vw * 1.78);}
   }
+  /* ---------- Top navbar ---------- */
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 24px;max-width:1120px;margin:0 auto;
+  }
+  .topbar-brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--teal-deep);}
+  .topbar-logo{
+    width:34px;height:34px;border-radius:10px;flex-shrink:0;
+    background:linear-gradient(135deg,var(--gold-soft),var(--teal));
+  }
+  .topbar-menu{
+    width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);
+    background:var(--cream);display:flex;align-items:center;justify-content:center;
+    color:var(--teal-deep);cursor:pointer;
+  }
+
+  /* ---------- Gradient campaign card ---------- */
+  .hero-card-wrap{padding:0 20px;margin-bottom:56px;}
+  .hero-card{
+    max-width:640px;margin:0 auto;border-radius:28px;
+    background:linear-gradient(155deg,var(--gold-soft) 0%,var(--teal) 70%,var(--teal-deep) 100%);
+    padding:38px 30px 34px;text-align:center;color:#fff;
+    box-shadow:0 24px 55px rgba(136,14,79,.28);
+  }
+  .hero-badge-pill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+    padding:9px 18px;border-radius:100px;font-size:.82rem;font-weight:700;
+    letter-spacing:.04em;text-transform:uppercase;margin-bottom:22px;
+  }
+  .hero-card h1{
+    color:#fff;font-size:clamp(1.7rem,4.5vw,2.5rem);margin-bottom:14px;
+  }
+  .hero-card .sub{
+    max-width:46ch;margin:0 auto;opacity:.92;font-size:1rem;color:#fff;
+  }
+  .cohort-box{
+    margin:28px auto 0;max-width:460px;background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.3);border-radius:18px;padding:18px 20px;
+    backdrop-filter:blur(4px);
+  }
+  .cohort-label{font-size:.85rem;font-weight:700;letter-spacing:.03em;margin-bottom:14px;opacity:.95;}
+  .countdown{display:flex;justify-content:center;gap:10px;}
+  .cd-unit{
+    background:rgba(255,255,255,.16);border-radius:12px;
+    padding:10px 4px;min-width:58px;
+  }
+  .cd-unit .num{display:block;font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;line-height:1;}
+  .cd-unit .lbl{display:block;font-size:.68rem;opacity:.85;margin-top:4px;text-transform:uppercase;letter-spacing:.03em;}
+  .btn-start{
+    display:inline-flex;align-items:center;gap:10px;margin-top:26px;
+    background:#fff;color:var(--teal-deep);font-weight:700;
+    padding:15px 30px;border-radius:100px;border:none;cursor:pointer;font-size:1rem;
+    box-shadow:0 12px 26px rgba(0,0,0,.18);transition:transform .25s ease;
+  }
+  .btn-start:hover{transform:translateY(-2px);}
+  @media(max-width:600px){
+    .hero-card{padding:30px 20px 26px;border-radius:22px;}
+    .cd-unit{min-width:52px;padding:8px 2px;}
+  }
 </style>
 </head>
 <body>
 
 <!-- ===================== HERO ===================== -->
 <header class="hero">
-  <div class="eyebrow-banner">
-    <span class="eyebrow-line">Learn · Grow · Inspire</span>
+  <nav class="topbar">
+    <div class="topbar-brand"><span class="topbar-logo"></span> ShivKrity</div>
+    <button class="topbar-menu" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+
+  <div class="hero-card-wrap">
+    <div class="hero-card">
+      <span class="hero-badge-pill">👨‍👩‍👧 Digital Skills Community</span>
+      <h1>Join 700+ People Building Digital Success From Home</h1>
+      <p class="sub">From Beginner to Skill Earner — learn practical digital skills with Shiv &amp; Krity, right from your phone.</p>
+
+      <div class="cohort-box">
+        <div class="cohort-label">⏰ NEXT COHORT STARTS IN</div>
+        <div class="countdown">
+          <div class="cd-unit"><span class="num" id="cd-days">00</span><span class="lbl">Days</span></div>
+          <div class="cd-unit"><span class="num" id="cd-hours">00</span><span class="lbl">Hours</span></div>
+          <div class="cd-unit"><span class="num" id="cd-mins">00</span><span class="lbl">Mins</span></div>
+          <div class="cd-unit"><span class="num" id="cd-secs">00</span><span class="lbl">Secs</span></div>
+        </div>
+      </div>
+
+      <button class="btn-start js-open-form">📸 Start Your Journey</button>
+    </div>
   </div>
+
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1>Grow with ShivKrity</h1>
+        <h2>Meet Shiv &amp; Krity</h2>
         <p>We are Shiv and Krity — a husband-and-wife team who started our digital journey from zero about a year ago. No technical background, no shortcuts. Just consistent learning, practice, and a simple dream: to build a future without leaving our family behind.</p>
         <div class="hero-stats">
           <div class="hero-stat"><b>700+</b><span>People trained &amp; guided</span></div>
@@ -342,7 +426,6 @@ fbq('track', 'PageView');
 <!-- ===================== SHORTS ===================== -->
 <section class="story">
   <div class="wrap">
-    <h2 class="center">हमारी Reels देखें</h2>
     <p class="center" style="margin:0 auto;opacity:.75;">Shiv &amp; Krity की डिजिटल जर्नी — छोटी-छोटी शॉर्ट वीडियोज़ में।</p>
     <div class="reel-track">
       <div class="reel-card"><iframe class="reel-player" src="https://www.youtube.com/embed/QRNzeS3a2Ts" title="ShivKrity Short" allowfullscreen loading="lazy"></iframe></div>
@@ -587,6 +670,41 @@ fbq('track', 'PageView');
     closeModal();
     leadForm.reset();
   });
+
+  // Countdown to the next cohort — rolls over to the next Monday 00:00 each week.
+  // Edit getNextCohortDate() if you want to point this at a fixed batch date instead.
+  function getNextCohortDate(){
+    const now = new Date();
+    const result = new Date(now);
+    const day = now.getDay(); // 0 = Sunday, 1 = Monday ...
+    let daysUntilMonday = (8 - day) % 7;
+    if (daysUntilMonday === 0) daysUntilMonday = 7;
+    result.setDate(now.getDate() + daysUntilMonday);
+    result.setHours(0, 0, 0, 0);
+    return result;
+  }
+
+  function updateCountdown(){
+    const target = getNextCohortDate();
+    const diff = Math.max(0, target - new Date());
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((diff / (1000 * 60)) % 60);
+    const secs = Math.floor((diff / 1000) % 60);
+
+    const pad = n => String(n).padStart(2, '0');
+    const dEl = document.getElementById('cd-days');
+    const hEl = document.getElementById('cd-hours');
+    const mEl = document.getElementById('cd-mins');
+    const sEl = document.getElementById('cd-secs');
+    if (dEl) dEl.textContent = pad(days);
+    if (hEl) hEl.textContent = pad(hours);
+    if (mEl) mEl.textContent = pad(mins);
+    if (sEl) sEl.textContent = pad(secs);
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 </script>
 </body>
 </html>
