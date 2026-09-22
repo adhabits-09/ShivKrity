@@ -296,24 +296,29 @@ fbq('track', 'PageView');
     display:flex;align-items:center;justify-content:space-between;
     padding:18px 24px;max-width:1120px;margin:0 auto;
   }
-  .topbar-brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--teal-deep);}
+  /* ---------- Full-bleed pink top banner ---------- */
+  .hero-banner{
+    background:linear-gradient(155deg,var(--gold-soft) 0%,var(--teal) 60%,var(--teal-deep) 100%);
+    border-radius:0 0 36px 36px;
+    padding-bottom:38px;
+    box-shadow:0 20px 45px rgba(136,14,79,.22);
+  }
+  .topbar-brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:#fff;}
   .topbar-logo{
     width:34px;height:34px;border-radius:10px;flex-shrink:0;
-    background:linear-gradient(135deg,var(--gold-soft),var(--teal));
+    background:rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.4);
   }
   .topbar-menu{
-    width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);
-    background:var(--cream);display:flex;align-items:center;justify-content:center;
-    color:var(--teal-deep);cursor:pointer;
+    width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(255,255,255,.45);
+    background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;
+    color:#fff;cursor:pointer;
   }
 
   /* ---------- Gradient campaign card ---------- */
-  .hero-card-wrap{padding:0 20px;margin-bottom:56px;}
+  .hero-card-wrap{padding:0 24px;}
   .hero-card{
-    max-width:640px;margin:0 auto;border-radius:28px;
-    background:linear-gradient(155deg,var(--gold-soft) 0%,var(--teal) 70%,var(--teal-deep) 100%);
-    padding:38px 30px 34px;text-align:center;color:#fff;
-    box-shadow:0 24px 55px rgba(136,14,79,.28);
+    max-width:640px;margin:0 auto;
+    padding:14px 6px 0;text-align:center;color:#fff;
   }
   .hero-badge-pill{
     display:inline-flex;align-items:center;gap:8px;
@@ -357,30 +362,32 @@ fbq('track', 'PageView');
 
 <!-- ===================== HERO ===================== -->
 <header class="hero">
-  <nav class="topbar">
-    <div class="topbar-brand"><span class="topbar-logo"></span> ShivKrity</div>
-    <button class="topbar-menu" aria-label="Menu">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-  </nav>
+  <div class="hero-banner">
+    <nav class="topbar">
+      <div class="topbar-brand"><span class="topbar-logo"></span> ShivKrity</div>
+      <button class="topbar-menu" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </nav>
 
-  <div class="hero-card-wrap">
-    <div class="hero-card">
-      <span class="hero-badge-pill">👨‍👩‍👧 Digital Skills Community</span>
-      <h1>Join 700+ People Building Digital Success From Home</h1>
-      <p class="sub">From Beginner to Skill Earner — learn practical digital skills with Shiv &amp; Krity, right from your phone.</p>
+    <div class="hero-card-wrap">
+      <div class="hero-card">
+        <span class="hero-badge-pill">👨‍👩‍👧 Digital Skills Community</span>
+        <h1>Join 700+ Women Building Digital Success From Home</h1>
+        <p class="sub">From Beginner to Skill Earner — learn practical digital skills with Shiv &amp; Krity, right from your phone.</p>
 
-      <div class="cohort-box">
-        <div class="cohort-label">⏰ NEXT COHORT STARTS IN</div>
-        <div class="countdown">
-          <div class="cd-unit"><span class="num" id="cd-days">00</span><span class="lbl">Days</span></div>
-          <div class="cd-unit"><span class="num" id="cd-hours">00</span><span class="lbl">Hours</span></div>
-          <div class="cd-unit"><span class="num" id="cd-mins">00</span><span class="lbl">Mins</span></div>
-          <div class="cd-unit"><span class="num" id="cd-secs">00</span><span class="lbl">Secs</span></div>
+        <div class="cohort-box">
+          <div class="cohort-label">⏰ NEXT COHORT STARTS IN</div>
+          <div class="countdown">
+            <div class="cd-unit"><span class="num" id="cd-days">00</span><span class="lbl">Days</span></div>
+            <div class="cd-unit"><span class="num" id="cd-hours">00</span><span class="lbl">Hours</span></div>
+            <div class="cd-unit"><span class="num" id="cd-mins">00</span><span class="lbl">Mins</span></div>
+            <div class="cd-unit"><span class="num" id="cd-secs">00</span><span class="lbl">Secs</span></div>
+          </div>
         </div>
-      </div>
 
-      <button class="btn-start js-open-form">📸 Start Your Journey</button>
+        <button class="btn-start js-open-form">📸 Start Your Journey</button>
+      </div>
     </div>
   </div>
 
